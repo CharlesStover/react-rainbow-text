@@ -1,11 +1,11 @@
 # react-rainbow-text
 Generates rainbow-colored text in React.
 
-[![package](https://img.shields.io/github/package-json/v/CharlesStover/react-rainbow-text.svg)](http://github.com/CharlesStover/delimiter/)
-[![build](https://travis-ci.com/CharlesStover/react-rainbow-text.svg)](https://travis-ci.com/CharlesStover/delimiter/)
-[![downloads](https://img.shields.io/npm/dt/react-rainbow-text.svg)](https://www.npmjs.com/package/delimiter)
-[![minified size](https://img.shields.io/bundlephobia/min/react-rainbow-text.svg)](https://www.npmjs.com/package/delimiter)
-[![minzipped size](https://img.shields.io/bundlephobia/minzip/react-rainbow-text.svg)](https://www.npmjs.com/package/delimiter)
+[![package](https://img.shields.io/github/package-json/v/CharlesStover/react-rainbow-text.svg)](http://github.com/CharlesStover/react-rainbow-text/)
+[![build](https://travis-ci.com/CharlesStover/react-rainbow-text.svg)](https://travis-ci.com/CharlesStover/react-rainbow-text/)
+[![downloads](https://img.shields.io/npm/dt/react-rainbow-text.svg)](https://www.npmjs.com/package/react-rainbow-text)
+[![minified size](https://img.shields.io/bundlephobia/min/react-rainbow-text.svg)](https://www.npmjs.com/package/react-rainbow-text)
+[![minzipped size](https://img.shields.io/bundlephobia/minzip/react-rainbow-text.svg)](https://www.npmjs.com/package/react-rainbow-text)
 
 [![animated demo](https://user-images.githubusercontent.com/343837/43996739-f59a8678-9d8e-11e8-80c3-8ebc115b144f.gif)](https://charlesstover.com/rainbow-text)
 
