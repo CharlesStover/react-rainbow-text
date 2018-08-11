@@ -59,7 +59,15 @@ export default class RainbowText extends React.PureComponent {
   }
 
   get gradient() {
-    return this._gradient(this.gradientSize, this.props.saturation, this.props.lightness);
+    return this._gradient(
+      this.gradientSize,
+      Object.prototype.hasOwnProperty.call(this.props, 'saturation') ?
+        this.props.saturation :
+        1,
+      Object.prototype.hasOwnProperty.call(this.props, 'lightness') ?
+        this.props.lightness :
+        0.5
+    );
   }
 
   get gradientSize() {
