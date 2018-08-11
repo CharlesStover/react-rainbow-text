@@ -4,46 +4,47 @@ import React from 'react';
 import Span from './span/span';
 
 const filterWhitespaceSize = arr => arr.filter(i => i !== ' ').length;
+
+const reduceCharactersToRainbow = (characters, Component, gradient, opacity) => {
+  let whitespace = 0;
+  return characters.reduce(
+    (accumulator, char, index) => {
+      if (char === ' ') {
+        whitespace++;
+        accumulator.push(' ');
+      }
+      else {
+        accumulator.push(
+          <Component
+            children={char}
+            color={
+              'rgb(' +
+                gradient[index - whitespace].join(', ') +
+                (
+                  opacity !== 1 ?
+                    ', ' + opacity :
+                    ''
+                ) +
+              ')'
+            }
+            key={index}
+          />
+        );
+      }
+      return accumulator;
+    },
+    []
+  );
+};
+
 const string2characters = string => string.split('');
 
 export default class RainbowText extends React.PureComponent {
 
   _characters = memoizeOne(string2characters);
+  _gradient = memoizeOne(rainbowGradient);
   _gradientSize = memoizeOne(filterWhitespaceSize);
-  rainbowGradient = memoizeOne(rainbowGradient);
-  reduceCharactersToRainbow = memoizeOne(this._reduceCharactersToRainbow);
-
-  _reduceCharactersToRainbow(characters, opacity) {
-    let whitespace = 0;
-    return characters.reduce(
-      (accumulator, char, index) => {
-        if (char === ' ') {
-          whitespace++;
-          accumulator.push(' ');
-        }
-        else {
-          accumulator.push(
-            <this.Component
-              children={char}
-              color={
-                'rgb(' +
-                  this.gradient[index - whitespace].join(', ') +
-                  (
-                    opacity !== 1 ?
-                      ', ' + opacity :
-                      ''
-                  ) +
-                ')'
-              }
-              key={this.props.children.length + '-' + char + index.toString()}
-            />
-          );
-        }
-        return accumulator;
-      },
-      []
-    );
-  }
+  reduceCharactersToRainbow = memoizeOne(reduceCharactersToRainbow);
 
   get characters() {
     return this._characters(this.props.children);
@@ -58,11 +59,19 @@ export default class RainbowText extends React.PureComponent {
   }
 
   get gradient() {
-    return this.rainbowGradient(this.gradientSize, this.props.saturation, this.props.lightness);
+    return this._gradient(this.gradientSize, this.props.saturation, this.props.lightness);
   }
 
   get gradientSize() {
     return this._gradientSize(this.characters);
+  }
+
+  get opacity() {
+    return (
+      Object.prototype.hasOwnProperty.call(this.props, 'opacity') ?
+        this.props.opacity :
+        1
+    );
   }
 
   render() {
@@ -72,9 +81,9 @@ export default class RainbowText extends React.PureComponent {
 
     return this.reduceCharactersToRainbow(
       this.characters,
-      Object.prototype.hasOwnProperty.call(this.props, 'opacity') ?
-        this.props.opacity :
-        1
+      this.Component,
+      this.gradient,
+      this.opacity
     );
   }
 }
