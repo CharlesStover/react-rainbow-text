@@ -1,9 +1,10 @@
 {
   "name": "react-rainbow-text",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Charles Stover <npmjs@charlesstover.com>",
   "dependencies": {
-    "@charlesstover/hsl2rgb": "^1.0.4"
+    "memoize-one": "^4.0.0",
+    "rainbow-gradient": "^1.0.0"
   },
   "description": "Generates rainbow-colored text in React.",
   "devDependencies": {
