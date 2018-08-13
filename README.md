@@ -38,6 +38,14 @@ import RainbowText from 'react-rainbow-text';
   0 is black.
   1 is white.
   0.5 is full color.
+  
+  **Example of 0.25 Lightness:**
+
+  [![image](https://user-images.githubusercontent.com/343837/44053946-ca2c27c0-9f06-11e8-820d-47d82f51ed0d.png)](https://charlesstover.com/rainbow-text)
+  
+  **Example of 0.75 Lightness:**
+
+  [![image](https://user-images.githubusercontent.com/343837/44053965-d983bc1a-9f06-11e8-9d09-2f8693a849e5.png)](https://charlesstover.com/rainbow-text)
 
 * opacity
 
@@ -49,3 +57,11 @@ import RainbowText from 'react-rainbow-text';
 
   0 is grayscale.
   1 is full color.
+
+  **Example of 0.5 Saturation:**
+  
+  [![image](https://user-images.githubusercontent.com/343837/44053997-fc2e5c84-9f06-11e8-9c8b-286fc106881c.png)](https://charlesstover.com/rainbow-text)
+  
+  **Example of 0.25 Saturation:**
+  
+  [![image](https://user-images.githubusercontent.com/343837/44054021-0d4b446e-9f07-11e8-8b2e-c546199f395a.png)](https://charlesstover.com/rainbow-text)
