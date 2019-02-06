@@ -1,4 +1,4 @@
-# Rainbow Text for React [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Beautifully%20rainbowify%20your%20text%20with%20the%20<RainbowText>%20React%20component.%20pic.twitter.com/9MUUjbb0n8&url=https://github.com/CharlesStover/react-rainbow-text&via=CharlesStover&hashtags=react,reactjs,javascript,webdev,webdeveloper,webdevelopment)
+# Rainbow Text for React [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Beautifully%20rainbowify%20your%20text%20with%20the%20<RainbowText>%20React%20component.%20pic.twitter.com/moyzdOUjdg&url=https://github.com/CharlesStover/react-rainbow-text&via=CharlesStover&hashtags=react,reactjs,javascript,webdev,webdeveloper,webdevelopment)
 
 Generates rainbow-colored text in React.
 
