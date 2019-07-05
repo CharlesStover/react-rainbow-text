@@ -1,6 +1,6 @@
 {
   "name": "react-rainbow-text",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Charles Stover <npmjs@charlesstover.com>",
   "dependencies": {
     "memoize-one": "^4.0.0",
